@@ -15,17 +15,18 @@ body {
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 768px) {
   .desktop {
-    display: initial;
+    display: block;
   }
 }
 
 header {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  padding: 5px 20px;
+  padding: 20px;
   position: fixed;
+  background-color: transparent;
   top: 0;
   z-index: 2;
   width: 100%;
@@ -54,6 +55,10 @@ header nav.right {
   text-align: right;
 }
 
+header nav.right a {
+  display: inline;
+}
+
 section {
   height: 100vh;
 }
@@ -62,47 +67,61 @@ section {
   background: url(./images/model-3.jpg);
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
 }
 .section-2 {
   background: url(./images/model-y.jpg);
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
 }
 .section-3 {
   background: url(./images/model-s.jpg);
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
 }
 .section-4 {
   background: url(./images/model-x.jpg);
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
 }
 .section-5 {
   background: url(./images/solarpanels.jpg);
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
 }
 .section-6 {
   background: url(./images/roof.jpg);
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
 }
 .section-7 {
   background: url(./images/accessories.jpg);
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
 }
 
 section .content {
+  /* position: fixed; */
   width: 100%;
+  /* top: 0; */
   height: 100vh;
+  /* transition: opacity 0.5s ease; */
   padding-top: 15vh;
   padding-bottom: 15vh;
   text-align: center;
   display: grid;
   grid-template-rows: min-content auto min-content;
 }
+
+/* section.active .content {
+  opacity: 1;
+} */
 
 section h1 {
   font-size: 3rem;
@@ -142,4 +161,65 @@ section .buttons {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
   }
+}
+
+aside {
+  position: fixed;
+  right: -320px;
+  width: 320px;
+  background-color: #fff;
+  padding: 80px 40px;
+  z-index: 4;
+  height: 100vh;
+}
+
+aside.active {
+  right: 0;
+}
+
+aside a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+aside button.close {
+  font-size: 24px;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.35);
+  transition: background-color 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.backdrop.active {
+  display: block;
+}
+
+.footer-text {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.footer-text a {
+  text-decoration: none;
+  color: rgb(15, 125, 209);
+  cursor: pointer;
 }
