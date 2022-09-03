@@ -1,5 +1,5 @@
 # Tesla Website Clone
-This is a website of a Tech Agency. I have developed it using HTML, CSS, JavaScript.
+This is a clone of Tesla website. I have developed it using HTML, CSS, JavaScript.
 
 ### Deployment
 | Environment | Link |
@@ -21,5 +21,5 @@ This is a website of a Tech Agency. I have developed it using HTML, CSS, JavaScr
 
 
 ### Website Preview:
-<img src="./assets/img/Tesla-2-0.png" alt="Tesla-2-0">
+<img src="./images/Tesla-2-0.png" alt="Tesla-2-0">
 
